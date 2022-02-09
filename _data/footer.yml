@@ -1,10 +1,11 @@
-- links:
+---
+    - links:
 #  - name: Pricing
 #    link: /pricing/
 #  - name: Blog
 #    link: /blog/
-  - name: About
-    link: /about/
+          - name: About
+            link: /about/
 #  - name: Contact
 #    link: /contact/
 #- links:
@@ -14,14 +15,14 @@
 #  - name: Sign Up
 #    link: /
 #    new_window: true
-  - name: Docs
-    link: https://aiidalab.readthedocs.io
-    new_window: true
+          - name: Docs
+            link: https://aiidalab.readthedocs.io
+            new_window: true
 #  - name: Status
 #    link: /
 #    new_window: true
-- links:
-  - name: GitHub
-    link: https://github.com/aiidalab
-    new_window: true
-    social_icon: GitHub
+    - links:
+          - name: GitHub
+            link: https://github.com/aiidalab
+            new_window: true
+            social_icon: GitHub
