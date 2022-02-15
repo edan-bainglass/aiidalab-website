@@ -1,7 +1,7 @@
 ---
 name: Jusong Yu
 position: Maintainer (EPFL)
-image_path: /images/jyu.jpg
+image_path: /images/jusong.jpg
 email: jusong.yu@epfl.ch
 twitter: n/a
 github: unkcpz
