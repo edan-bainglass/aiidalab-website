@@ -1,6 +1,6 @@
 ---
 name: Carl Simon Adorf
-position: Maintainer (EPFL)
+position: Project lead (EPFL)
 image_path: /images/csadorf.jpg
 email: simon.adorf@epfl.ch
 twitter: carlsimonadorf
