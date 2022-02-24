@@ -1,8 +1,4 @@
 ---
-#- name: Pricing
-#  link: /pricing/
-#  new_window: false
-#  highlight: false
 #- name: Blog
 #  link: /blog/
 #  new_window: false
@@ -10,6 +6,10 @@
 - name: Docs
   link: https://aiidalab.readthedocs.org
   new_window: true
+- name: Deployments
+  link: /deployments/
+  new_window: false
+  highlight: false
 - name: GitHub
   link: https://github.com/aiidalab
   new_window: true
