@@ -1,0 +1,105 @@
+---
+title: Deployments
+heading: Official Deployments
+description: You can run AiiDAlab yourself, however we also maintain a few official cloud-backed deployments.
+deployments_table:
+  - name: Open demonstrator
+    color: "#65BF21"
+    status: online
+    features:
+      - text: Open to all users affiliated with an academic institution.
+        highlight: true
+      - text: Runs on a Kubernetes cluster hosted at CESNET
+      - text: Sponsored by the <a href="https://www.eosc-hub.eu/">EOSC-hub</a> <a href="https://eosc-hub.eu/research-communities/open-aiida-lab-platform-cloud-computing-materials-science">Early Adopter Program</a>
+      - images:
+          - src: images/endorsers/eosc-hub.png
+            alt: EOSC-Hub logo
+    call_to_action:
+      link: https://aiidalab-demo.materialscloud.org
+      text: Login
+  - name: Materials Cloud
+    color: "#D21F15"
+    status: online
+    features:
+      - text: Open to all researchers affiliated with <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>
+        highlight: true
+      - text: Hosted at the <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a>
+      - text: Sponsored by a <a href="https://prace-ri.eu/">PRACE</a>-<a href="https://fenix-ri.eu/">FENIX</a> grant
+      - images:
+          - src: images/endorsers/prace.png
+            alt: PRACE logo
+          - src: images/endorsers/fenix.png
+            alt: FENIX logo
+    call_to_action:
+      link: https://aiidalab.materialscloud.org
+      text: Login
+  - name: Materials MarketPlace
+    color: "#05587B"
+    status: online
+    features:
+      - text: Open to all Materials Modeling MarketPlace users
+        highlight: true
+      - text: Runs on a Kubernetes cluster hosted at DigitalOcean
+      - text: Sponsored by the <a href="https://www.materials-marketplace.eu">Materials Modeling MarketPlace</a>
+      - images:
+          - src: images/endorsers/materials-marketplace.png
+            alt: Materials MarketPlace logo
+    call_to_action:
+      link: https://materials-marketplace.aiidalab.net
+      text: Login
+faq:
+  - question: Why does the public demostrator require an EGI account and enrollment?
+    answer: |
+      We offer this service for free, but that does not mean it is free.
+      Requiring the login via EGI allows us to protect against service abuse like crypto-mining.
+  - question: How can I get access to the Materials Cloud deployments?
+    answer: |
+      These deployments is restricted to members of organizations affiliated with the <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners"</a>.
+      If you are one of these members, please contact <a href="aiidalab@materialscloud.org">aiidalab@materialscloud.org</a> and request access.
+  - question: I am not eligible for any of these deployments, how can I use AiiDAlab?
+    answer: |
+      The easiest would be to simply run it yourself!
+      Please see <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">here</a> for instructions on how to run AiiDAlab yourself.
+  - question: Questions?
+    answer: Please message us at <a href="mailto:aiidalab@materialscloud.org">aiidalab@materialscloud.org</a> for any other questions.
+---
+
+<div class="deployments">
+  {% for deployment in page.deployments_table %}
+  <ul class="deployment">
+    <li style="background: {{ deployment.color }}">
+      <h3>{{ deployment.name }}</h3>
+    </li>
+    {% for feature in deployment.features %}
+    <li {% if feature.highlight %} class="highlighted" {% endif %}>
+      {{ feature.text }} {% for image in feature.images %}
+      <img src="{{ site.base_url }}/{{ image.src }}" alt="{{ image.alt }}" />
+      {% endfor %}
+    </li>
+    {% endfor %} {% if deployment.call_to_action %}
+    <li class="deployments-cta">
+      <div class="status">Status: {{ deployment.status | upcase }}</div>
+      <div class="button">
+        <a
+          style="background: {{ deployment.color }}"
+          href="{{ deployment.call_to_action.link }}"
+          >{{ deployment.call_to_action.text }} &rarr;</a
+        >
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+  {% endfor %}
+</div>
+
+{% if page.faq %}
+<h2>Pricing FAQ</h2>
+<dl class="faq">
+  {% for item in page.faq %}
+  <div>
+    <dt>{{ item.question }}</dt>
+    <dd>{{ item.answer }}</dd>
+  </div>
+  {% endfor %}
+</dl>
+{% endif %}
