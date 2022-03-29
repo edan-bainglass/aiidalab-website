@@ -19,6 +19,22 @@
   margin: 0;
   padding: 100px 0;
 
+  .video-block {
+    width: 98%;
+    align: center;
+
+    .embed-container {
+      position: relative;
+      padding-right: 1em;
+      padding: 1em;
+      overflow: hidden;
+      max-width: 45%;
+    }
+    .first {
+      float: left;
+    }
+  }
+
   .testimonial-block {
     max-width: 750px;
     width: 98%;
