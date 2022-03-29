@@ -5,12 +5,12 @@ description: >-
 ---
 
 <p class="editor-link" style="text-align: center">
-  <a href="cloudcannon:collections/_staff_members/" class="btn"
-    ><strong>&#9998;</strong> Manage Staff members</a
+  <a href="cloudcannon:collections/_team_members/" class="btn"
+    ><strong>&#9998;</strong> Manage Team members</a
   >
 </p>
-<ul class="staff">
-  {% for person in site.staff_members %}
+<ul class="team">
+  {% for person in site.team_members %}
   <li>
     <div class="square-image">
       <img
@@ -19,11 +19,18 @@ description: >-
       />
     </div>
     <div class="name">
-      <a target="_blank" href="https://twitter.com/{{ person.twitter }}"
-        >{{ person.name }}</a
-      >
+      <a href="mailto:{{ person.email }}">{{ person.name }}</a>
     </div>
     <div class="position">{{ person.position }}</div>
+  </li>
+  {% endfor %}
+</ul>
+
+<h4>Former contributors</h4>
+<ul>
+  {% for person in site.former_members %}
+  <li>
+    <a href="mailto:{{ person.email }}">{{ person.name }}</a>
   </li>
   {% endfor %}
 </ul>

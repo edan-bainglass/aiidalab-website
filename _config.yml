@@ -27,7 +27,9 @@ social:
 timezone: Europe/Zurich
 
 collections:
-  staff_members:
+  team_members:
+    _hide_content: true
+  former_members:
     _hide_content: true
 
 paginate: 10
@@ -41,7 +43,7 @@ defaults:
       layout: page
   - scope:
       path: ""
-      type: staff_members
+      type: team_members
     values:
       _options:
         image_path:
