@@ -7,6 +7,13 @@ The website is currently under development and can be reached at: https://aiidal
 
 This page is built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well and based on the [Hydra template](https://github.com/CloudCannon/hydra-jekyll-template).
 
+Install `jekyll` and `bundler`:
+
+```bash
+gem install jekyll bundler
+sudo gem install public_suffix -v '4.0.6' --source 'https://rubygems.org/'
+```
+
 Install the dependencies with [Bundler](http://bundler.io/):
 
 ```bash
