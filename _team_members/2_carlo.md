@@ -1,5 +1,5 @@
 ---
-name: Carlo Pignedolli
+name: Carlo Pignedoli
 email: carlo.pignedoli@empa.ch
 position: Project lead
 affiliation: Empa
