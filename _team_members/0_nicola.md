@@ -1,6 +1,7 @@
 ---
 name: Nicola Marzari
 email: nicola.marzari@epfl.ch
-position: Executive Committee (EPFL)
+position: Advisory Committee
+affiliation: EPFL
 image_path: /images/nicola.png
 ---

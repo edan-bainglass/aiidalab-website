@@ -1,6 +1,7 @@
 ---
 name: Dou Du
 email: dou.du@epfl.ch
-position: Individual Contributor (EPFL)
+position: Maintainer
+affiliation: EPFL
 image_path: /images/dou.png
 ---

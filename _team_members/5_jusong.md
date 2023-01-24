@@ -1,6 +1,7 @@
 ---
 name: Jusong Yu
-position: Maintainer (EPFL)
+position: Maintainer
+affiliation: EPFL
 image_path: /images/jusong.jpg
 email: jusong.yu@epfl.ch
 twitter:

@@ -1,6 +1,7 @@
 ---
 name: Xing Wang
-position: Maintainer (EPFL)
+position: Maintainer
+affiliation: EPFL
 image_path: /images/xing.jpg
 email: xing.wang@epfl.ch
 twitter:
