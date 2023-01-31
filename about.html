@@ -9,7 +9,7 @@ description: >-
     ><strong>&#9998;</strong> Manage Team members</a
   >
 </p>
-<h4>Project Lead</h4>
+<h4>Team Leaders</h4>
 <ul class="team">
   {% for person in site.team_members %}
     {% if person.position == "Project lead" %}
@@ -28,7 +28,7 @@ description: >-
     {% endif %}
   {% endfor %}
 </ul>
-<h4>Matainer</h4>
+<h4>Core Developers</h4>
 <ul class="team">
   {% for person in site.team_members %}
     {% if person.position == "Maintainer" %}
