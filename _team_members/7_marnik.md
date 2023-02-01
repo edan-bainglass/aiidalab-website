@@ -1,8 +1,8 @@
 ---
 name: Marnik Bercx
 email: marnik.bercx@epfl.ch
-position: App Developer
+position: Maintainer 
 affiliation: EPFL
-image_path: /images/marnik.jpeg
+image_path: /images/marnik.jpg
 blurb: Marnik develops the QE App and AiiDA plugin.
 ---
