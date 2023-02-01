@@ -1,10 +1,10 @@
 ---
 name: Jusong Yu
 position: Maintainer
-affiliation: EPFL
+affiliation: PSI
 image_path: /images/jusong.jpg
-email: jusong.yu@epfl.ch
+email: jusong.yu@psi.ch
 twitter:
 github: unkcpz
-blurb: Jusong is a post-doctoral researcher at EPFL.
+blurb: Jusong is a post-doctoral researcher at PSI.
 ---

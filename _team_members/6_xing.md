@@ -1,10 +1,10 @@
 ---
 name: Xing Wang
 position: Maintainer
-affiliation: EPFL
+affiliation: PSI
 image_path: /images/xing.jpg
-email: xing.wang@epfl.ch
+email: xing.wang@psi.ch
 twitter:
 github: superstar54
-blurb: Xing is a post-doctoral researcher at EPFL.
+blurb: Xing is a post-doctoral researcher at PSI.
 ---

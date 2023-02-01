@@ -1,7 +1,7 @@
 ---
 name: Giovanni Pizzi
-email: giovanni.pizzi@epfl.ch
+email: giovanni.pizzi@psi.ch
 position: Project lead
-affiliation: EPFL
+affiliation: PSI
 image_path: /images/giovanni.jpg
 ---
