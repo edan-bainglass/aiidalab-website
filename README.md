@@ -1,7 +1,7 @@
 # AiiDAlab landing page
 
 Landing page for the AiiDAlab project.
-The website is currently under development and can be reached at: https://aiidalab.github.io .
+The website is currently under development and can be reached at: https://aiidalab.net .
 
 ## Develop
 
