@@ -10,7 +10,8 @@ This page is built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should
 Install `jekyll` and `bundler`:
 
 ```bash
-gem install jekyll bundler
+sudo apt install ruby-dev
+sudo gem install jekyll bundler
 sudo gem install public_suffix -v '4.0.6' --source 'https://rubygems.org/'
 ```
 
