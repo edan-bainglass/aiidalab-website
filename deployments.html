@@ -10,7 +10,12 @@ deployments_table:
       - text: Open to all researchers affiliated with <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>
         highlight: true
       - text: Hosted at the <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a>
-      - text: Policies <br> <a href="{{ site.baseurl }}/terms-of-use/">Terms of Use</a><br><a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy (Personal Data Protection)</a>
+      - text: Policies <br>
+        links:
+          - href: /terms-of-use
+            text: Terms of Use
+          - href: /privacy-policy
+            text: Privacy Policy (Personal Data Protection)
       - text: Sponsored by a <a href="https://prace-ri.eu/">PRACE</a>-<a href="https://fenix-ri.eu/">FENIX</a> grant
       - images:
           - src: images/endorsers/prace.png
@@ -59,7 +64,9 @@ faq:
     </li>
     {% for feature in deployment.features %}
     <li {% if feature.highlight %} class="highlighted" {% endif %}>
-      {{ feature.text }} {% for image in feature.images %}
+      {{ feature.text }} {% for link in feature.links %}
+      <a href="{{ site.baseurl }}{{ link.href }}">{{ link.text }}</a><br />
+      {% endfor %} {% for image in feature.images %}
       <img src="{{ site.base_url }}/{{ image.src }}" alt="{{ image.alt }}" />
       {% endfor %}
     </li>
