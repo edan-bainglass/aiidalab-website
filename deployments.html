@@ -1,7 +1,7 @@
 ---
 title: Deployments
 heading: Official Deployments
-description: You can <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">run AiiDAlab yourself</a>, however we also maintain a few official cloud-backed deployments.
+description: You can <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">run AiiDAlab yourself</a>, however we also maintain a few official cloud-backed deployments for researchers affiliated with some of the projects funding the development of AiiDAlab.
 deployments_table:
   - name: Materials Cloud
     color: "#D21F15"
@@ -40,10 +40,6 @@ deployments_table:
       link: https://materials-marketplace.aiidalab.net
       text: Login
 faq:
-  - question: Why does the public demonstrator require an EGI account and enrollment?
-    answer: |
-      Providing this service comes at substantial cost.
-      Requiring the login via EGI allows us to protect against service abuse like crypto-mining.
   - question: How can I get access to the Materials Cloud deployments?
     answer: |
       These deployments are restricted to members of organizations affiliated with the <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>.
@@ -86,8 +82,7 @@ faq:
   {% endfor %}
 </div>
 
-<h2 id="acknowledgment">Acknowledgment</h2>
-{% include acknowledgement.html %} {% if page.faq %}
+{% if page.faq %}
 <h2>FAQ</h2>
 <dl class="faq">
   {% for item in page.faq %}
