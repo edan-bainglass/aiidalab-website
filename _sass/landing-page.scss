@@ -21,7 +21,7 @@
 
   .video-block {
     width: 98%;
-    text-align: center;
+    align: center;
 
     .embed-container {
       position: relative;
@@ -98,8 +98,7 @@
   }
 
   .reference {
-    b {
-      font-weight: bold;
-    }
+    font-style: italic;
+    font-weight: normal;
   }
 }
