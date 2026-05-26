@@ -1,0 +1,80 @@
+---
+title: About
+---
+
+<p class="editor-link" style="text-align: center">
+  <a href="cloudcannon:collections/_team_members/" class="btn"
+    ><strong>&#9998;</strong> Manage Team members</a
+  >
+</p>
+
+<h3>Team</h3>
+<p>Our team is largely based in Switzerland at the EPFL, PSI and Empa.</p>
+
+<h4>Team Leaders</h4>
+<ul class="team">
+  {% for person in site.team_members %} {% if person.position == "Project lead"
+  %}
+  <li>
+    <div class="square-image">
+      <img
+        src="{% include relative-src.html src=person.image_path %}"
+        alt="{{ person.name }}"
+      />
+    </div>
+    <div class="name">
+      <a href="{{ person.page }}">{{ person.name }}</a>
+    </div>
+    <div class="position">{{ person.affiliation }}</div>
+  </li>
+  {% endif %} {% endfor %}
+</ul>
+<h4>Core Developers</h4>
+<ul class="team">
+  {% for person in site.team_members %} {% if person.position == "Maintainer" %}
+  <li>
+    <div class="square-image">
+      <img
+        src="{% include relative-src.html src=person.image_path %}"
+        alt="{{ person.name }}"
+      />
+    </div>
+    <div class="name">
+      <a href="{{ person.page }}">{{ person.name }}</a>
+    </div>
+    <div class="position">{{ person.affiliation }}</div>
+  </li>
+  {% endif %} {% endfor %}
+</ul>
+
+<h4>Advisory Committee</h4>
+<ul class="team">
+  {% for person in site.team_members %} {% if person.position ==
+  "Advisory_Committee" %}
+  <li>
+    <div class="square-image">
+      <img
+        src="{% include relative-src.html src=person.image_path %}"
+        alt="{{ person.name }}"
+      />
+    </div>
+    <div class="name">
+      <a href="{{ person.page }}">{{ person.name }}</a>
+    </div>
+    <div class="position">{{ person.affiliation }}</div>
+  </li>
+  {% endif %} {% endfor %}
+</ul>
+
+<h4>Former contributors</h4>
+<ul>
+  {% for person in site.former_members %}
+  <li>{{ person.name }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Our sponsors</h3>
+<p>{% include funding.html %}</p>
+
+<h3 class="editable" id="acknowledgment">Citation</h3>
+{% include acknowledgement.html %}

@@ -1,0 +1,253 @@
+---
+title: Deployments
+heading: Official Deployments
+description: You can run AiiDAlab yourself, try it out on the demo server maintained by the AiiDAlab team, or use one of the institutional deployments (if you are part of those institutions).
+deployments_table:
+  - name: Open to all
+    deployments:
+      - name: Demo server
+        logo: aiidalab_logo.png
+        color: "#3ABB14"
+        hosts:
+          - name: Microsoft Azure
+            link: https://azure.microsoft.com
+        access: Open to all researchers
+        status: online
+        button:
+          link: https://demo.aiidalab.io
+
+      - name: Local deployment
+        logo: aiidalab_logo.png
+        color: "#1a7300"
+        hosts:
+          - name: You, running on your computer/laptop
+        button:
+          text: Run it yourself
+          link: https://aiidalab.readthedocs.io/en/latest/usage/access/local.html
+
+  - name: Institutional
+    deployments:
+      - name: AiiDAlab@Empa
+        logo: images/endorsers/empa.png
+        color: "#BE0000"
+        hosts:
+          - name: Swiss National Supercomputing Centre (CSCS)
+            link: https://www.cscs.ch/
+        access: Open to all Empa employees and collaborators
+        sponsors:
+          - name: NCCR MARVEL
+            logo: https://nccr-marvel.ch/_Resources/Static/Packages/Marvel.Website/Images/marvel-logo-text.svg?bust=ad32c11f
+            link: https://nccr-marvel.ch/
+        policies:
+          - href: https://aiidalab.materialscloud.org/hub/static/terms-of-use.html
+            text: Terms of Use
+          - href: https://aiidalab.materialscloud.org/hub/static/privacy-policy.html
+            text: Privacy Policy (Personal Data Protection)
+        status: online
+        button:
+          link: https://aiidalab.empa.cscs.ch
+
+      - name: AiiDAlab@PSI
+        logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTH82FMk7yk26-lNuUBsGL5qbM5vMWuu8nQ&s
+        color: "#0014E6"
+        hosts:
+          - name: Paul Scherrer Institut (PSI)
+            link: https://www.psi.ch
+        access: Open to all PSI employees
+        status: online
+        button:
+          text: Login [requires PSI network access]
+          link: https://aiidalab.psi.ch
+
+      - name: AiiDAlab-LNS@PSI
+        logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTH82FMk7yk26-lNuUBsGL5qbM5vMWuu8nQ&s
+        color: "#000b82"
+        hosts:
+          - name: Paul Scherrer Institut (PSI)
+            link: https://www.psi.ch
+        access: Open to active SINQ users
+        status: online
+        server: https://aiidalab-lns.psi.ch
+
+  - name: Other deployments
+    deployments:
+      - name: Materials MarketPlace
+        logo: https://materials-marketplace.eu/assets/img/logo.svg
+        color: "#05587B"
+        hosts:
+          - name: DigitalOcean
+            link: https://www.digitalocean.com/
+        access: Open to all Materials Modeling MarketPlace users
+        sponsors:
+          - name: Materials Modeling MarketPlace
+            logo: https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png
+            link: https://www.materials-marketplace.eu/
+        status: Offline
+        button:
+          link: https://materials-marketplace.aiidalab.net
+
+      - name: Materials Cloud - NEP
+        logo: https://nffa.eu/content/images/2021/Logo%20NFFA.png
+        color: "#E5642A"
+        hosts:
+          - name: Swiss National Supercomputing Centre (CSCS)
+            link: https://www.cscs.ch/
+        access: Open to all researchers affiliated with <a href="https://www.nffa.eu/news/project-updates/pilot-nep/">NFFA-Europe PILOT (NEP) affiliation</a>
+        sponsors:
+          - name: NFFA-Europe PILOT (NEP)
+            logo: images/endorsers/nffa.png
+            link: https://www.nffa.eu/news/project-updates/pilot-nep/
+        status: Offline
+        button:
+          link: https://aiidalab-nep.materialscloud.org
+
+faq:
+  - question: How can I get access to the Materials Cloud deployments?
+    answer: |
+      These deployments are restricted to members of organizations affiliated with the <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>.
+      If you are one of these members, please contact <a href="aiidalab@materialscloud.org">aiidalab@materialscloud.org</a> and request access.
+  - question: I am not eligible for any of these deployments, how can I use AiiDAlab?
+    answer: |
+      The easiest would be to simply run it yourself!
+      Please see <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">here</a> for instructions on how to run AiiDAlab yourself.
+  - question: Questions?
+    answer: Please message us at <a href="mailto:aiidalab@materialscloud.org">aiidalab@materialscloud.org</a> for any other questions.
+---
+
+<div class="deployments-page">
+  <div class="accordion mb-3" id="deploymentsAccordion">
+    {% for category in page.deployments_table %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading{{ forloop.index }}">
+        <button
+          class="accordion-button {% if forloop.last %}collapsed{% endif %}"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse{{ forloop.index }}"
+          aria-expanded="true"
+          aria-controls="collapse{{ forloop.index }}"
+        >
+          {{ category.name }}
+        </button>
+      </h2>
+      <div
+        id="collapse{{ forloop.index }}"
+        class="accordion-collapse collapse {% unless forloop.last %}show{% endunless %}"
+        aria-labelledby="heading{{ forloop.index }}"
+      >
+        <div class="accordion-body">
+          <div class="deployments row gy-4 justify-content-center">
+            {% for deployment in category.deployments %}
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="{% unless deployment.logo contains 'http' %}{{ site.baseurl }}/{% endunless %}{{ deployment.logo }}"
+                    class="card-img-top"
+                    alt="{{ deployment.name}}"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: {{ deployment.color }}"
+                  >
+                    {{deployment.name}}
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        {% for host in deployment.hosts %}
+                        <!---->
+                        {% if host.link %}
+                        <a href="{{ host.link }}">{{ host.name }}</a>
+                        {% else %}
+                        <!---->
+                        {{ host.name }}
+                        <!---->
+                        {% endif %}
+                        <br />
+                        {% endfor %}
+                      </div>
+                      {% if deployment.access %}
+                      <div class="access">
+                        <h6>Access</h6>
+                        {{ deployment.access }}
+                      </div>
+                      {% endif %}
+                      <!---->
+                      {% if deployment.sponsors %}
+                      <div class="sponsors">
+                        <h6>Sponsored by</h6>
+                        <ul>
+                          {% for sponsor in deployment.sponsors %}
+                          <li
+                            style="width: calc(100% / {{ deployment.sponsors | size }})"
+                          >
+                            <a href="{{ sponsor.link }}">
+                              <img
+                                src="{% unless sponsor.logo contains 'http' %}{{ site.baseurl }}/{% endunless %}{{ sponsor.logo }}"
+                                alt="{{ sponsor.name }}"
+                              />
+                            </a>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      {% endif %}
+                      <!---->
+                      {% if deployment.policies %}
+                      <div class="policies">
+                        <h6>Policies</h6>
+                        <ul>
+                          {% for policy in deployment.policies %}
+                          <li>
+                            <a href="{{ policy.href }}">{{ policy.text }}</a>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      {% endif %}
+                    </div>
+                    {% if deployment.warning %}
+                    <div class="warning">{{ deployment.warning }}</div>
+                    {% endif %}
+                    <!---->
+                    {% if deployment.status %}
+                    <div class="status">
+                      Status: {{ deployment.status | upcase }}
+                    </div>
+                    {% endif %}
+                  </div>
+                  <div class="card-footer">
+                    {% if deployment.status != 'Offline' %}
+                    <a
+                      href="{{ deployment.button.link }}"
+                      class="btn btn-primary"
+                      style="background: {{ deployment.color }}"
+                      >{{ deployment.button.text | default: 'Login' }}
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if page.faq %}
+<h2>FAQ</h2>
+<dl class="faq">
+  {% for item in page.faq %}
+  <div>
+    <dt>{{ item.question }}</dt>
+    <dd>{{ item.answer }}</dd>
+  </div>
+  {% endfor %}
+</dl>
+{% endif %}

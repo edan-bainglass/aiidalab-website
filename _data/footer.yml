@@ -1,0 +1,28 @@
+---
+- links:
+    - name: Docs
+      link: https://aiidalab.readthedocs.io
+      new_window: true
+    - name: Deployments
+      link: /deployments/
+    #  - name: Blog
+    #    link: /blog/
+    #  - name: Contact
+    #    link: /contact/
+    #- links:
+    #  - name: Login
+    #    link: /
+    #    new_window: true
+    #  - name: Sign Up
+    #    link: /
+    #    new_window: true
+- links:
+    #  - name: Status
+    #    link: /
+    #    new_window: true
+    - name: GitHub
+      link: https://github.com/aiidalab
+      new_window: true
+      social_icon: GitHub
+    - name: About
+      link: /about/
